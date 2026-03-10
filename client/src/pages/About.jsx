@@ -7,79 +7,105 @@ import { FaRegHeart } from "react-icons/fa6";
 const About = () => {
   return (
     <>
-      <div className="pt-35 pb-2 text-white h-screen">
-        {/* Header */}
+      <section className="relative min-h-screen overflow-hidden bg-slate-950 px-6 pb-16 pt-32 text-white  md:px-12">
+        <div className="pointer-events-none absolute -top-20 left-[-12%] h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-[-14%] right-[-8%] h-80 w-80 rounded-full bg-blue-400/20 blur-3xl" />
 
-        <div className="flex flex-col gap-3 text-center">
-          <h1 className="text-5xl font-bold text-teal-600 shadow-md ">
-            About Me
-          </h1>
-          <p className="px-80 text-[15px] text-gray-200 ">
-            I'm Nitish Kumar - passionate about turning ideas into beautiful,
-            useful software. Here's a glimpse of who I am, what I love, and
-            where I'm headed.
-          </p>
-        </div>
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
+          {/* Hero section */}
+          <div className="text-center md:p-12">
+            <h1 className="text-4xl font-bold text-cyan-300 sm:text-5xl md:text-6xl">
+              About Me
+            </h1>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-slate-300 md:text-lg">
+              I am Nitish, passionate about turning ideas into applications.
+              Here is a glimpse of who I am, what I love, and where I am headed.
+            </p>
+          </div>
 
-        {/*Box  */}
-
-        <div className="grid grid-cols-2 gap-10 mt-10 px-40">
-          <div className="flex gap-5 p-5 rounded-2xl bg-gray-100/10 scale-100 duration-500 hover:scale-105 hover:duration-500 w-125">
-            <div className="text-2xl text-red-400 py-1">
-              <TbSchool />
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-xl font-medium">Education</h3>
-              <div className="text-gray-300">
-                <p>
-                  <span className="text-red-400">
+          {/* Education */}
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="flex gap-4 rounded-2xl border border-white/10 bg-slate-900/50 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/70">
+              <div className="pt-1 text-2xl text-cyan-300">
+                <TbSchool />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-100">
+                  Education
+                </h3>
+                <p className="mt-2 text-slate-300">
+                  <span className="font-medium text-cyan-300">
                     IES College of Technology
                   </span>
-                  - B.Tech, CGPA 7.3
+                  - B.Tech, CGPA 7.3.
                 </p>
-                <p>I got 67% in 12th and 81% in my 10th CBSE Board.</p>
+                <p className="text-slate-300">
+                  Scored 67% in class 12 and 81% in class 10 CBSE.
+                </p>
               </div>
             </div>
-          </div>
 
-          <div className="flex gap-5 p-5 rounded-2xl bg-gray-100/10 scale-100 duration-500 hover:scale-105 hover:duration-500 w-125">
-            <div className="text-2xl text-red-400 py-1">
-              <FiBookOpen />
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-xl font-medium">Passion</h3>
-              <div className="text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto laudantium, culpa reiciendis obcaecati alias .
-              </div>
-            </div>
-          </div>
+            {/* Passion */}
 
-          <div className="flex gap-5 p-5 rounded-2xl bg-gray-100/10 max-w-fit scale-100 duration-500 hover:scale-105 hover:duration-500 w-125">
-            <div className="text-2xl text-red-400 py-1">
-              <AiOutlineRise />
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-xl font-medium">Intrest</h3>
-              <div className="text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas deleniti, deserunt te.
+            <div className="flex gap-4 rounded-2xl border border-white/10 bg-slate-900/50 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/70">
+              <div className="pt-1 text-2xl text-cyan-300">
+                <FiBookOpen />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-100">
+                  Passion
+                </h3>
+                <p className="mt-2 text-slate-300">
+                  I love turning ideas into practical products and writing code
+                  that is easy to read, scale, and maintain.
+                </p>
               </div>
             </div>
-          </div>
 
-          <div className="flex gap-5 p-5 rounded-2xl bg-gray-100/10 max-w-fit scale-100 duration-500 hover:scale-105 hover:duration-500 w-125">
-            <div className="text-2xl text-red-400 py-1">
-              <FaRegHeart />
+            {/* Intrest */}
+
+            <div className="flex gap-4 rounded-2xl border border-white/10 bg-slate-900/50 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/70">
+              <div className="pt-1 text-2xl text-cyan-300">
+                <AiOutlineRise />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-100">
+                  Interests
+                </h3>
+                <p className="mt-2 text-slate-300">
+                  I am interested in backend architecture, clean UI design, and
+                  improving problem-solving through regular DSA practice.
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <h3 className="text-xl font-medium">Hobbies</h3>
-              <div className="text-gray-300">
-                Love to watch cricket, discussing about politics, listening
-                music.
+
+            {/* Hobbies */}
+
+            <div className="flex gap-4 rounded-2xl border border-white/10 bg-slate-900/50 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/70">
+              <div className="pt-1 text-2xl text-cyan-300">
+                <FaRegHeart />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-100">
+                  Hobbies
+                </h3>
+                <p className="mt-2 text-slate-300">
+                  I enjoy cricket, meaningful conversations, and listening to
+                  music when I am not coding.
+                </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Footer Notes */}
+      <div
+        className="flex justify-center items-center py-2
+        bg-slate-900/70 backdrop-blur-xl "
+      >
+        <div className="text-slate-300 text-sm md:text-base tracking-wide">
+          © 2026 Nitish Kumar. All rights reserved.
         </div>
       </div>
     </>

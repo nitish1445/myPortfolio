@@ -1,166 +1,164 @@
 import React from "react";
-import image from "../assets/craveit.jpg";
-import image1 from "../assets/chatus.jpg";
-import { FiGithub } from "react-icons/fi";
-import {
-  IoIosArrowDropleftCircle,
-  IoIosArrowDroprightCircle,
-} from "react-icons/io";
-import { BsBoxArrowUpRight } from "react-icons/bs";
+import image from "../assets/projects/healthup.png";
+import image1 from "../assets/projects/craveit.png";
+import image2 from "../assets/projects/converse.png";
+
+const projects = [
+  {
+    title: "HealthUp",
+    img: image,
+    date: "Feb 2026",
+    desc: "An AI-powered adaptive fitness intelligence platform designed to provide personalized workout plans, diet recommendations, habit tracking, and AI coaching.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "TailwindCSS",
+      "JWT",
+      "REST API",
+    ],
+    github: "https://github.com/Rakhiraj1686/NavKalpana-RICR-NK-0029",
+    live: "https://healthup-ai.netlify.app/",
+  },
+  {
+    title: "CraveIt",
+    img: image1,
+    date: "Jan 2026",
+    desc: "A seamless food ordering platform with authentication, cart system, real-time tracking and admin management.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "REST API"],
+    github:
+      "https://github.com/nitish1445/RICR-Web-Development/tree/main/CreaveIt",
+    live: "#",
+  },
+  {
+    title: "Converse",
+    img: image2,
+    date: "Feb 2026",
+    desc: "Real-time chat application with secure messaging, responsive UI and fast socket communication.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Socket.io",
+      "Express",
+      "JWT",
+      "REST API",
+      "FlyconUI",
+    ],
+    github: "https://github.com/nitish1445/chat-app",
+    live: "#",
+  },
+  {
+    title: "Photo Editor",
+    // img: image1,
+    date: "Dec 2025",
+    desc: "A basic photo editor tool.",
+    tech: ["HTML", "CSS", "Bootstrap", "Javascript"],
+    github:
+      "https://github.com/nitish1445/RICR-Web-Development/tree/main/JavaScript/imageEditor",
+    live: "#",
+  },
+  {
+    title: "Weather App",
+    // img: ,
+    date: "Dec 2025",
+    desc: "Live weather update of given location",
+    tech: ["HTML", "CSS", "Bootstrap", "Javascript"],
+    github:
+      "https://github.com/nitish1445/RICR-Web-Development/tree/main/weatherApp",
+    live: "#",
+  },
+];
 
 const Projects = () => {
   return (
     <>
-      <div className="pt-35 mb-20 text-white h-screen">
+      <section className="relative min-h-screen overflow-hidden bg-slate-950 px-6 pb-16 pt-32 text-white  md:px-12">
+        <div className="pointer-events-none absolute -top-20 left-[-12%] h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-[-14%] right-[-8%] h-80 w-80 rounded-full bg-blue-400/20 blur-3xl" />
         {/* Header */}
-
-        <div className="flex flex-col gap-3 text-center">
-          <h1 className="text-5xl font-bold text-teal-600 shadow-md ">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h1 className="text-5xl font-bold bg-linear-to-r from-cyan-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Projects
           </h1>
-          <div className="px-80 text-[15px] text-gray-200 ">
-            A few highlights of the projects I've built or contributed to.
-          </div>
+
+          <p className="text-slate-400 mt-4">
+            A few highlights of the projects I've built or contributed in.
+          </p>
         </div>
 
-        <div className="flex gap-5 px-40 py-5">
-          {/* Crave it */}
-          <button className="text-2xl cursor-pointer">
-            <IoIosArrowDropleftCircle />
-          </button>
-          <div className="p-5 w-70 bg-gray-200/10 rounded-[18px]">
-            {/* photo */}
-
-            <img src={image} alt="" className="w-65 h-40 rounded-lg" />
-
-            {/* project name */}
-
-            <h3 className="text-xl font-medium py-3">CraveIt</h3>
-
-            {/* description */}
-
-            <div className="text-[14px] pb-2">
-              A seamless food ordering platform with secure authentication, cart
-              system, real time tracking and resturant admin managment.
-            </div>
-
-            {/* libraries */}
-
-            <div className="space-y-2 py-2 text-xs">
-              <div className="space-x-1">
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  React
-                </span>
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  Node.js
-                </span>
-
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  MongoDB
-                </span>
+        {/* Project Cards */}
+        <div className="space-y-10 max-w-6xl mx-auto">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-slate-900/70 border border-cyan-500/20 rounded-2xl p-4 md:p-8 flex flex-col md:flex-row items-center gap-10 hover:border-cyan-400 transition"
+            >
+              {/* Image */}
+              <div className="flex-1 flex justify-center order-1 md:order-2">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="max-w-sm w-full h-full md:h-55 rounded"
+                />
               </div>
-              <div className="space-x-1">
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  Express
-                </span>
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  TailwindCSS
-                </span>
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  Cloudnary
-                </span>
-              </div>
-            </div>
 
-            {/* button  */}
+              {/* Text */}
+              <div className="flex-1 order-2 md:order-1">
+                <div className="flex flex-col gap-4">
+                  <h2 className="text-3xl font-bold text-cyan-400">
+                    {project.title}
+                  </h2>
 
-            <div className="flex gap-5 justify-start items-center text-xs pt-2">
-              <div className="flex gap-1 items-center text-red-400 cursor-pointer">
-                <FiGithub />
+                  <p className="text-slate-400 text-sm">{project.date}</p>
 
-                <a
-                  href="https://github.com/nitish1445/RICR-Web-Development/tree/main/CreaveIt"
-                  target="blank"
-                  className="hover:underline"
-                >
-                  Github
-                </a>
-              </div>
-              <div className="flex gap-1 items-center text-violet-300 cursor-pointer">
-                <BsBoxArrowUpRight />
-                <a href="#" target="blank" className="hover:underline">
-                  Live Demo
-                </a>
+                  <p className="text-slate-300 leading-relaxed text-sm">
+                    {project.desc}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((t, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-3 py-1 rounded-md bg-slate-800 text-cyan-300 border border-cyan-400/20"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-4 flex-wrap">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="px-5 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition"
+                    >
+                      View Code →
+                    </a>
+
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      className="px-5 py-2 bg-orange-500 rounded-lg hover:bg-orange-600 transition"
+                    >
+                      View Live
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
+      </section>
 
-          {/* chatus */}
-
-          <div className="p-5 w-70 bg-gray-200/10 rounded-[18px]">
-            {/* photo */}
-
-            <img src={image1} alt="" className="w-65 h-40 rounded-lg" />
-
-            {/* project name */}
-
-            <h3 className="text-xl font-medium py-3">ChatUP</h3>
-
-            {/* description */}
-
-            <div className="text-[14px] pb-2">
-              A real-time chatting application enabling seamless user
-              communication with responsive UI and secure message handling.
-            </div>
-
-            {/* libraries */}
-
-            <div className="space-y-2 py-2 text-xs">
-              <div className="space-x-1">
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  React
-                </span>
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  Node.js
-                </span>
-
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  MongoDB
-                </span>
-              </div>
-              <div className="space-x-1">
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  Express
-                </span>
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  TailwindCSS
-                </span>
-                <span className="bg-red-300/40 px-2 py-0.5 rounded-2xl text-red-300">
-                  Cloudnary
-                </span>
-              </div>
-            </div>
-
-            {/* button  */}
-
-            <div className="flex gap-5 justify-start items-center text-xs pt-2">
-              <div className="flex gap-1 items-center text-red-400 cursor-pointer">
-                <FiGithub />
-                <a href="#" target="blank" className="hover:underline">
-                  Github
-                </a>
-              </div>
-              <div className="flex gap-1 items-center text-violet-300 cursor-pointer">
-                <BsBoxArrowUpRight />
-                <a href="#" target="blank" className="hover:underline">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-          <button className="text-2xl cursor-pointer">
-            <IoIosArrowDroprightCircle />
-          </button>
+      {/* Footer Notes */}
+      <div
+        className="flex justify-center items-center py-2
+        bg-slate-900/70 backdrop-blur-xl "
+      >
+        <div className="text-slate-300 text-sm md:text-base tracking-wide">
+          © 2026 Nitish Kumar. All rights reserved.
         </div>
       </div>
     </>
