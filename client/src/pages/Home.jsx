@@ -28,8 +28,16 @@ const Home = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-xl text-xl font-bold text-slate-300 font-['Zeyada']">
-          I am a Software Developer specializing in full stack development.
+        <p className="max-w-xl text-xl font-bold text-slate-300 font-['Zeyada'] px-2">
+          <span>A passionate </span>
+          <span className="text-cyan-400 font-semibold">
+            Full-Stack Developer
+          </span>
+          <span>
+            {" "}
+            who loves building scalable web applications and solving real-world
+            problems.
+          </span>
         </p>
 
         {/* Buttons */}

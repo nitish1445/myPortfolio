@@ -34,7 +34,7 @@ const projects = [
   {
     title: "Converse",
     img: image2,
-    date: "Feb 2026",
+    date: "Mar 2026",
     desc: "Real-time chat application with secure messaging, responsive UI and fast socket communication.",
     tech: [
       "React",
@@ -49,26 +49,6 @@ const projects = [
     github: "https://github.com/nitish1445/chat-app",
     live: "#",
   },
-  {
-    title: "Photo Editor",
-    // img: image1,
-    date: "Dec 2025",
-    desc: "A basic photo editor tool.",
-    tech: ["HTML", "CSS", "Bootstrap", "Javascript"],
-    github:
-      "https://github.com/nitish1445/RICR-Web-Development/tree/main/JavaScript/imageEditor",
-    live: "#",
-  },
-  {
-    title: "Weather App",
-    // img: ,
-    date: "Dec 2025",
-    desc: "Live weather update of given location",
-    tech: ["HTML", "CSS", "Bootstrap", "Javascript"],
-    github:
-      "https://github.com/nitish1445/RICR-Web-Development/tree/main/weatherApp",
-    live: "#",
-  },
 ];
 
 const Projects = () => {
@@ -77,87 +57,112 @@ const Projects = () => {
       <section className="relative min-h-screen overflow-hidden bg-slate-950 px-6 pb-16 pt-32 text-white  md:px-12">
         <div className="pointer-events-none absolute -top-20 left-[-12%] h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl" />
         <div className="pointer-events-none absolute bottom-[-14%] right-[-8%] h-80 w-80 rounded-full bg-blue-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute top-[28%] left-[38%] h-64 w-64 rounded-full bg-emerald-400/10 blur-3xl" />
+
         {/* Header */}
+
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h1 className="text-5xl font-bold bg-linear-to-r from-cyan-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight bg-linear-to-r from-cyan-300 via-blue-300 to-emerald-300 bg-clip-text text-transparent">
             Projects
           </h1>
 
           <p className="text-slate-400 mt-4">
-            A few highlights of the projects I've built or contributed in.
+            Some of the applications I've built and contributed while learning
+            and exploring full-stack development.
           </p>
         </div>
 
-        {/* Project Cards */}
-        <div className="space-y-10 max-w-6xl mx-auto">
+        {/* Projects Grid */}
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-900/70 border border-cyan-500/20 rounded-2xl p-4 md:p-8 flex flex-col md:flex-row items-center gap-10 hover:border-cyan-400 transition"
+              className="group relative rounded-2xl border border-cyan-400/10 bg-slate-900/60 backdrop-blur overflow-hidden hover:border-cyan-400/50 transition duration-300"
             >
               {/* Image */}
-              <div className="flex-1 flex justify-center order-1 md:order-2">
+
+              <div className="overflow-hidden">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="max-w-sm w-full h-full md:h-55 rounded"
+                  className="h-52 w-full object-cover transition duration-500 group-hover:scale-110"
                 />
               </div>
 
-              {/* Text */}
-              <div className="flex-1 order-2 md:order-1">
-                <div className="flex flex-col gap-4">
-                  <h2 className="text-3xl font-bold text-cyan-400">
+              {/* Content */}
+
+              <div className="p-6 flex flex-col gap-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-cyan-300">
                     {project.title}
-                  </h2>
+                  </h3>
 
-                  <p className="text-slate-400 text-sm">{project.date}</p>
+                  <span className="text-xs text-slate-400">{project.date}</span>
+                </div>
 
-                  <p className="text-slate-300 leading-relaxed text-sm">
-                    {project.desc}
-                  </p>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  {project.desc}
+                </p>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t, i) => (
-                      <span
-                        key={i}
-                        className="text-xs px-3 py-1 rounded-md bg-slate-800 text-cyan-300 border border-cyan-400/20"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                {/* Tech */}
 
-                  <div className="flex gap-4 flex-wrap">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      className="px-5 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition"
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-2 py-1 rounded-md bg-slate-800 border border-cyan-400/20 text-cyan-300"
                     >
-                      View Code →
-                    </a>
+                      {t}
+                    </span>
+                  ))}
+                </div>
 
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      className="px-5 py-2 bg-orange-500 rounded-lg hover:bg-orange-600 transition"
-                    >
-                      View Live
-                    </a>
-                  </div>
+                {/* Buttons */}
+
+                <div className="flex gap-3 mt-3">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center text-sm py-2 border border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition"
+                  >
+                    View Code →
+                  </a>
+
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center text-sm py-2 bg-orange-500 rounded-lg hover:bg-orange-600 transition"
+                  >
+                    View Live →
+                  </a>
                 </div>
               </div>
+
+              {/* Featured Tag */}
+
+              {project.featured && (
+                <div className="absolute top-3 left-3 bg-cyan-400 text-black text-xs px-2 py-1 rounded">
+                  Featured
+                </div>
+              )}
             </div>
           ))}
         </div>
+        <p className="text-center text-slate-400 text-sm mt-10">
+          More projects coming soon...
+        </p>
       </section>
 
       {/* Footer Notes */}
+
       <div
         className="flex justify-center items-center py-2
         bg-slate-900/70 backdrop-blur-xl "
       >
-        <div className="text-slate-300 text-sm md:text-base tracking-wide">
+        <div className="text-slate-300 text-sm  tracking-wide">
           © 2026 Nitish Kumar. All rights reserved.
         </div>
       </div>

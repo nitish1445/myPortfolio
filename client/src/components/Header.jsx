@@ -94,7 +94,7 @@ const Header = () => {
         <div
           ref={drawerRef}
           className={`fixed right-0 top-0 h-full w-[65%] max-w-sm 
-          bg-slate-900/90 backdrop-blur-xl border-l border-white/10
+          bg-slate-900/90 backdrop-blur-xl
           text-white shadow-2xl z-50 transform transition-transform duration-300 lg:hidden ${
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
