@@ -5,28 +5,28 @@ const certificates = [
     title: "Cloud Computing",
     org: "NPTEL",
     year: "May 2025",
-    link: "https://drive.google.com/drive/folders/1yamNO5a1ZDvOyuiRyNK6RutcMSOmAQEE?usp=sharing",
+    link: "https://drive.google.com/file/d/1GCyoqe7dVNM-jDmOV2VxDw2RBwbhfm1o/preview",
     note: "Completed NPTEL course covering cloud architecture, virtualization, distributed systems, and cloud service models.",
   },
   {
     title: "Programming in Java (Silver)",
     org: "NPTEL",
     year: "Nov 2025",
-    link: "https://drive.google.com/drive/folders/1yamNO5a1ZDvOyuiRyNK6RutcMSOmAQEE?usp=sharing",
+    link: "https://drive.google.com/file/d/1-Zv8w2aECLK17bxzPw3d3QSrgSfdY1df/preview",
     note: "Achieved Silver certification demonstrating strong understanding of Java fundamentals, OOP concepts, and problem solving.",
   },
   {
     title: "Internet of Things",
     org: "NPTEL",
     year: "Nov 2024",
-    link: "https://drive.google.com/drive/folders/1yamNO5a1ZDvOyuiRyNK6RutcMSOmAQEE?usp=sharing",
+    link: "https://drive.google.com/file/d/1DeoTSYIDLdtwq7-sapQqR3QMeersOsr9/preview",
     note: "Learned IoT architecture, sensors, embedded communication, and real-world connected device applications.",
   },
   {
     title: "Meshmerize Robo Competition",
     org: "Techfest IIT Bombay (Bhopal Zone)",
     year: "2025",
-    link: "https://drive.google.com/drive/folders/1yamNO5a1ZDvOyuiRyNK6RutcMSOmAQEE?usp=sharing",
+    link: "https://drive.google.com/file/d/1rES4GBFHWg_m38oKUIsyCuHtuEXxd-9n/preview",
     note: "Secured 3rd place in the Meshmerize robotics competition demonstrating teamwork, problem-solving, and technical implementation.",
   },
 ];
@@ -134,7 +134,9 @@ const Certificates = () => {
             <iframe
               src={selectedCert.link}
               title={selectedCert.title}
-              className="w-full h-125 rounded-lg"
+              width="100%"
+              height="500"
+              className="rounded-lg shadow-lg"
             />
           </div>
         </div>
